@@ -1,0 +1,48 @@
+public class Teacher {//create class of teacher
+	//Attributes
+	String name;//create name variable attribute
+	String subject;//create subject variable attribute
+	int grade;//create grade variable attribute
+	String sex;//create sex variable attribute
+	int age;//create age variable attribute
+	
+	//method
+	
+	public Teacher(String name, String subject, int grade, String sex, int age)//creating of constructor
+	{
+		this.name = name;//refer to current object name
+		this.subject = subject;//refer to current object subject
+		this.grade = grade;//refer to current object grade
+		this.sex = sex;//refer to current object sex
+		this.age = age;//refer to current object age
+	}
+	
+	public String toString()//create of constructor
+	{
+		String output = "Name: " + name;//output of the name constructor when use
+		output += "\nSubject: " + subject;//output of the subject constructor when use
+		output += "\nGrade: " + grade;//output of the grade constructor when use
+		output += "\nSex: " + sex;//output of the sex constructor when use
+		output += "\nAge: " + age;//output of the age constructor when use
+		return output;//return the output to class
+	}
+	
+}
+
+public class TeacherTest {
+	
+	 public static void main (String [] args)
+	 {
+	
+	Teacher elsie = new Teacher("Elsie","Afrikaans",10,"Female",65);//call on the class teacher give it name and populate its given constructors
+	Teacher simone = new Teacher("Simone","English",8,"Female",24);//call on the class teacher give it name and populate its given constructors
+	Teacher stoffel = new Teacher("Christoffel","Maths",12,"Male",46);//call on the class teacher give it name and populate its given constructors
+	
+	System.out.println("Teachers" + "\n");//output Teacher on line
+	System.out.println(elsie + "\n");//calls on class student and output all of populate as per class
+	System.out.println(simone + "\n");//calls on class student and output all of populate as per class
+	System.out.println(stoffel + "\n");//calls on class student and output all of populate as per class
+	
+	}
+
+}
