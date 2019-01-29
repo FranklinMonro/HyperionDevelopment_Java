@@ -1,0 +1,39 @@
+package rockPaperScissors;
+import javax.swing.*;  
+
+public class rockPaperScissors {
+	public static void main(String[] args ){
+	int choice = 0;
+	int random = (int)(Math.random()*(3-0));
+	System.out.println(random+"");
+	
+	System.out.println("0. Rock\n"+
+			"1. Paper\n"+
+			"2. Scissors\n");
+		choice = Integer.parseInt( JOptionPane.showInputDialog("Enter Number"));
+	
+	
+	if (choice == 0 && random == 1 ) {
+		System.out.println("You Lose!");
+	}
+	else if (choice == 0 && random == 2){
+		System.out.println("You Win!");
+	}
+	else if (choice == 1 && random == 0){
+		System.out.println("You Win!");
+	}
+	else if (choice == 1 && random == 2){
+		System.out.println("You Lose!");
+	}
+	else if (choice == 2 && random == 0){
+		System.out.println("You Lose!");
+	}
+	else if (choice == 2 && random == 1){
+		System.out.println("You Win!");
+	}
+	else {
+		System.out.println("It's a draw");
+	}
+		
+	}
+	}
