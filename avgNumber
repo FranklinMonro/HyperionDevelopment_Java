@@ -1,0 +1,53 @@
+package averageNumber;
+
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class averageNumber
+{
+	static Scanner reader = new Scanner(System.in);
+	static ArrayList<Integer> posNum = new ArrayList<Integer>();//create a array for all the positive numbers
+	static ArrayList<Integer> negNum = new ArrayList<Integer>();//create a array for all the negative numbers
+	static ArrayList<Integer> allNum = new ArrayList<Integer>();//create a array for all the numbers
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("Please enter an array of numbers, type in 0 when finished: ");
+		int in = reader.nextInt();//input of numbers
+		
+		while(in != 0) //while the number is not 0 user can put in numbers
+		{
+			
+			allNum.add(in);//add numbers to array for all numbers
+			in = reader.nextInt();//while the number is not 0 user can put in numbers
+			if (in > 0)
+			{
+				posNum.add(in);//when number is bigger than 0 add to positive array
+			}
+			else  
+			{
+				negNum.add(in);//when number is smaller than 0 add to negative array
+			}
+			
+		}
+		int lenPosNum = posNum.size();//variable for the size of array for all positive numbers
+		int lenNegNum = negNum.size();//variable for the size of array for all negative numbers
+		int lenAllNum = allNum.size();//variable for the size of array for all numbers
+		System.out.println("The total of positive numbers is: " + (lenPosNum+1));//print out the size of all the positive numbers
+		System.out.println("The total of negative numbers is: " + (lenNegNum-1));//print out the size of all the negative numbers
+		System.out.println("The total of numbers is: "+ lenAllNum);//print out the size of all the numbers
+		
+		int sum = 0;
+		for(int i: allNum)
+		{
+			//System.out.println(i);
+			sum += i;
+			System.out.println(sum);
+		}
+	}
+	
+	
+}
