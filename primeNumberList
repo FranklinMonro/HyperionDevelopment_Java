@@ -1,0 +1,24 @@
+
+package javaPrograms;
+import java.util.*;//import utility module
+public class primeNumberLimit2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);//create scanner to input from user
+		System.out.println("Till what number do you want to check for prime numbers:");//output for user
+		int numberLimit = input.nextInt();//input from user
+		System.out.println("Check for prime numbers between 1 and " + numberLimit);//output for user
+		
+		for(int i = 0; i < numberLimit ; i++) {//loop through all the numbers
+			if(i%2==0) {//check each number if it is not a prime
+				System.out.println(i + " is not a prime number");
+			}else {
+				System.out.println(i + " is a prime number");
+			}
+		
+		
+
+	}
+		input.close();
+}
+}
