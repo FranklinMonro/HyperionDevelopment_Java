@@ -1,0 +1,43 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class JuniTask2Test {
+
+	@Test
+	public void testCorrectLength(){
+		JuniTask2 testDemo = new JuniTask2();
+		
+		assertTrue(testDemo.correctLength("This is a test string"));
+		
+	}
+	
+	@Test
+	public void testAnotherLength() {
+		JuniTask2 testDemo = new JuniTask2();
+		String testSentence = testDemo.stringCharAt("This is a test string");
+		assertEquals(21, testSentence.length());
+	}
+	
+	@Test
+	public void testCharAt() {
+		JuniTask2 testDemo = new JuniTask2();
+		String testSentence = testDemo.stringCharAt("This is a test string");
+		assertEquals(testSentence.charAt(0), 'T' );
+	}
+	
+	@Test
+	public void testSubstring() {
+		JuniTask2 testDemo = new JuniTask2();
+		String testSentence = testDemo.stringCharAt("This is a test string");
+		assertEquals(testSentence.substring(10, 14), "test");
+	}
+	
+	@Test
+	public void testIndexOf() {
+		JuniTask2 testDemo = new JuniTask2();
+		String testSentence = testDemo.stringCharAt("This is a test string");
+		assertTrue(testSentence.indexOf('T') == 0);
+	}
+
+}
