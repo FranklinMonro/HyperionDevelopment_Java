@@ -1,0 +1,62 @@
+
+import java.util.Scanner;
+public class sumElements {
+	public static void main(String[] args)
+	{
+		Scanner reader = new Scanner(System.in);//creating scanner
+		System.out.println("Enter size of the array: ");
+		int arrSize1 = reader.nextInt();
+		System.out.println("Enter size of nested array: ");
+		int arrSize2 = reader.nextInt();
+		double[][] multArray;
+		multArray = new double[arrSize1][arrSize2];
+		double columnTotal = 0;
+		double rowTotal = 0;
+	
+		for (int i = 0; i < arrSize1; i++)//initialize to input numbers to multi array
+		{
+			for(int j = 0; j < arrSize2; j++)
+			{
+				System.out.println("Please insert number the number that goes into position " + i+j +" of your multidimensional array: ");
+				multArray[i][j] = reader.nextInt();//input number to array
+				
+			}
+			
+		}
+		
+		for (int i = 0; i < arrSize1; i++)//initialize to print out multi array
+		{
+			for(int j = 0; j < arrSize2; j++)
+			{
+				System.out.print(" " + multArray[i][j]);
+				
+			}
+			System.out.println(" ");
+		}
+		System.out.println("What column do you want the sum of?: ");
+		int whCol = reader.nextInt();//input to pick column to get sum of
+		for (int i = 0; i < multArray.length; i++)//initialize to make sum of a column
+		{
+			
+			columnTotal += multArray[i][whCol];
+		}
+		System.out.println(columnTotal);
+		
+		System.out.println("What row do you want the sum of?: ");
+		int rwCol = reader.nextInt();//input to pick row to get sum of
+		for (int j = 0; j < multArray.length; j++)//initialize to make sum of a row
+		{
+			
+			columnTotal += multArray[rwCol][j];
+		}
+		System.out.println(rowTotal);
+		
+		
+		
+		reader.close();
+		
+		
+	
+
+}
+}
