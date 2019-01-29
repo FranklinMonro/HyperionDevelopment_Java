@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class townInput {
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		
+		File fileInput = new File("C:\\Users\\FrancoGroenewald\\eclipse-workspace\\Task 20\\src\\town.txt");//input file 
+		Scanner input = new Scanner(fileInput);//use scanner to input file
+		ArrayList<String> townArray = new ArrayList<String>();//create a arralist
+		
+		
+		
+		while(input.hasNextLine())//while loop to insert from txt file into a array
+		{
+			townArray.add(input.nextLine());//add information into array
+		}
+		
+		Collections.sort(townArray, String.CASE_INSENSITIVE_ORDER);//sort the array alphabetically in array
+		
+		System.out.println(townArray);//print out array
+		input.close();//close scanner
+
+		
+	}
+}
