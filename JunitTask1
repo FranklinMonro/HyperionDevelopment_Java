@@ -1,0 +1,13 @@
+import java.util.*;
+public class PrimeNumberMethod {
+
+	
+	public boolean isPrime(int numberInput) {
+		
+		if(numberInput %2 != 0) {
+			return true ;
+		}else {
+			return false;
+		}
+	}
+}
