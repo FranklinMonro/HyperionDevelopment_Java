@@ -1,0 +1,19 @@
+
+package javaPrograms;
+import java.util.*;//import utility 
+public class primeNumber {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);//create input for user
+		System.out.println("What number do you want to check if it is a prime number:");//output for user
+		int checkNumber = input.nextInt();//input of integer from user
+		
+		if(checkNumber%2 == 0) {//check if input of number is not a prime number
+			System.out.println("This number: " + checkNumber + " is not a prime number.");
+		}else {
+			System.out.println("This number: " + checkNumber + " is a prime number.");
+		}
+		input.close();
+	}
+
+}
