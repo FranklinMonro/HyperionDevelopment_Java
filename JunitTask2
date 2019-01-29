@@ -1,0 +1,24 @@
+public class JuniTask2 {
+	
+	public boolean correctLength(String sentence) {
+		int count = 0;
+		for (int i = 0; i < sentence.length(); i++) {
+			count++;
+		}
+		if(sentence.length()==count) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public String stringCharAt(String sentence) {
+		
+		return sentence;
+	}
+	
+	
+	
+	
+
+}
