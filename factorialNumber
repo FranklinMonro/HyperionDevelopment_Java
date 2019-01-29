@@ -1,0 +1,24 @@
+package factorialNumber;
+
+import java.util.Scanner; //import input scanner
+
+public class factorial {
+	public static void main(String[] args)
+	{
+		Scanner reader = new Scanner(System.in);//scanner for input 
+		System.out.println("Please insert a positive number to find factorial: ");
+		int num = reader.nextInt();//input of number
+		int fact = 1;//minimum number to factorial to
+		if (num > 0)//number input must always be positive
+		{
+			for(int i = 1; i <= num; i++)//for loop to interiad through numbers
+			{
+				fact = fact*i;//multiply each number with each other
+				
+			}
+			
+		}
+			System.out.println(fact);//put out of number
+	}
+	
+}
