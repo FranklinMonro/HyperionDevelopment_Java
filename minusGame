@@ -1,0 +1,49 @@
+package task5;
+import java.util.Scanner;//import scanner to have user input
+
+public class minusGame {
+	public static void main(String[] args)
+	{
+		Scanner reader = new Scanner(System.in);//create scanner for user input
+		System.out.println("How many time do you want to play?: ");//output ask how many games user want to play
+		int howManyGames = reader.nextInt();//variable to store amount of games user want to play
+		int correctCount = 0;//variable to store count of correct answers
+		int gameCount =0;//variable to store count of games playes
+		String endResult = " ";
+		
+		
+		while (gameCount < howManyGames)//while loop to when game count is bigger than amount of games want to play exit loop
+		{
+			int number1 = (int)(Math.random()*10);//variable to store a random number from 1 -10
+			int number2 = (int)(Math.random()*10);//variable to store a random number from 1-10
+			
+			if (number1 > number2)//if loop to start when number1 is bigger than number2
+			{
+				
+				
+				
+			
+				System.out.println("What is " + number1 + " - " + number2);//output to ask minus sum and for answer
+				int answer = reader.nextInt();//variable to input number
+				if(number1-number2 == answer)//if loop for comparing answers
+				{
+				System.out.println("That is correct!");//if the answer is correct
+				correctCount++;//count all correct answers
+				
+				
+				}
+				else
+				
+				System.out.println("That is wrong!\n" + "The correct answer is: " + (number1-number2));//output that answer is wrong and giving correct answer
+				gameCount++;//count amount of games played
+				
+				endResult +="\n" + number1 + "-" + number2 + "=" + answer +(( number1 - number2 == answer ) ? " correct" : " wrong" );//collect date of games correct and wrong
+				
+			}
+			
+			
+	}
+
+		System.out.println(endResult);//output the end result of the games played
+	}
+}
