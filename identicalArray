@@ -1,0 +1,45 @@
+
+//import java.util.ArrayList;
+import java.util.Arrays; 
+import java.util.Scanner;
+
+public class identicalArrays {
+	public static void main(String[] args)
+	{
+		
+		Scanner reader = new Scanner(System.in);//creating scanner
+		System.out.println("Insert size of first array: ");//output 
+		int arrSize1 = reader.nextInt();//input to create size of first array
+		
+		int[] arr1 = new int[arrSize1];//create a array for all the first numbers
+		
+		System.out.println("Insert size of first array: ");//output
+		int arrSize2 = reader.nextInt();//input to create size of second array
+		
+		int[] arr2 = new int[arrSize2];//create a array for all the second numbers
+		
+	
+		{
+		
+		for (int i = 0; i < arrSize1; i++)//initialize the first array
+		{
+			System.out.println("Enter number " +(i+1)+ " of number for first array:");//output
+			arr1[i] = reader.nextInt();//input of numbers for first array
+		}
+		for (int j = 0; j < arrSize2; j++)//initialize the second array
+		{
+			System.out.println("Enter number " +(j+1)+ " of number for second array:");//output
+			arr2[j] = reader.nextInt();//input of number for second array
+		}
+		if (Arrays.equals(arr1, arr2))//if statement to check if arrays are equal
+		{
+			System.out.println("The arrays are equal!");//output
+		}
+		else
+		{
+			System.out.println("The arrays are not equal!");//output
+		}
+		reader.close();//close reader
+}
+}
+}
