@@ -1,0 +1,24 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class townInputPriorityQue {
+
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+		File fileInput = new File("C:\\\\Users\\\\FrancoGroenewald\\\\eclipse-workspace\\\\Task 20\\\\src\\\\town.txt");
+		Scanner input = new Scanner(fileInput);
+		PriorityQueue<String> townQue = new PriorityQueue<String>();
+		
+		while(input.hasNextLine())
+		{
+			townQue.offer(input.nextLine());
+		}
+		
+		while(townQue.size() > 0)
+		{
+			System.out.print(townQue.remove() + "\n");
+		}
+		
+	}
+
+}
