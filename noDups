@@ -1,0 +1,45 @@
+import java.util.Scanner; //import scanner to input
+import java.util.ArrayList;//import arraylist to create arrays
+import java.util.HashSet;//import hashset to create set(using set to delete all duplicates)
+
+public class noDups {
+	public static void main (String[] args)//main argument
+	{
+		HashSet<Double> x = deleteDup();//calling of method in main
+		System.out.println(x);//print out answer
+				
+	}
+	static HashSet<Double> deleteDup()//creating method for deleting duplicates in a array
+	{
+	Scanner reader = new Scanner(System.in);//creating input variable
+		
+		ArrayList<Double> arr1 = new ArrayList<Double>(); //creating a array to store in input of user
+		System.out.println("Enter numbers for array(to exit 99): ");//output asking for input
+		double askNum = reader.nextDouble();//variable to receive of input
+		arr1.add(askNum);//adding the input to the array
+		
+		while (askNum != 99)//while loop to stay in input of user
+		{
+			
+			System.out.println("Enter numbers for array(to exit 99): ");//output asking for input
+			askNum = reader.nextDouble();//variable to receive of input
+			arr1.add(askNum);//adding the input to the array
+		}
+		
+		if (arr1.size() > 0)//if loop to remove the last 99 from array
+		{
+			arr1.remove(arr1.size()-1);//removing of the last index of array 99
+		}
+	
+		
+		HashSet<Double> newSet = new HashSet<Double>();//creating of new set 
+		
+		for (double i: arr1)//for loop to go through the array and to add to set
+		{
+			newSet.add(i);//adding numbers to set
+		}
+		
+		
+		return newSet;//return the set to the method
+	}
+}
