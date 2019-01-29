@@ -1,0 +1,48 @@
+
+import java.util.*;
+public class nameQue {
+
+	public static void main(String[] args) {
+		PriorityQueue<String> firstNameQue = new PriorityQueue<String>();//create a priority queue
+		firstNameQue.offer("George");//add a string to the priority queue
+		firstNameQue.offer("Jim");//add a string to the priority queue
+		firstNameQue.offer("John");//add a string to the priority queue
+		firstNameQue.offer("Blake");//add a string to the priority queue
+		firstNameQue.offer("Kevin");//add a string to the priority queue
+		firstNameQue.offer("Michael");//add a string to the priority queue
+		
+		PriorityQueue<String> secondNameQue = new PriorityQueue<String>();//create a priority queue
+		secondNameQue.offer("George");//add a string to the priority queue
+		secondNameQue.offer("Katie");//add a string to the priority queue
+		secondNameQue.offer("Kevin");//add a string to the priority queue
+		secondNameQue.offer("Michelle");//add a string to the priority queue
+		secondNameQue.offer("Ryan");//add a string to the priority queue
+		
+		System.out.println("Print out the two queus:");//output
+		System.out.print("The first queue is: " + firstNameQue + "\n");//print out first queue
+		System.out.print("The second queue is: " + secondNameQue + "\n");//print out second queue
+		System.out.println();//create a white space line
+		
+		
+		PriorityQueue<String> unionNameQue = new PriorityQueue<String>(firstNameQue);//create a priority queue
+		unionNameQue.addAll(secondNameQue);//add both queue into one que
+		System.out.println("Print out the union queue:");//output
+		System.out.println(unionNameQue + "\n");//print out the combine queue
+		
+		
+		PriorityQueue<String> differenceNameQue = new PriorityQueue<String>(firstNameQue);//create a priority queue
+		differenceNameQue.removeAll(secondNameQue);//remove all the double strings in both queues and put rest in queue
+		System.out.println("Print out the difference queue:");//output
+		System.out.println(differenceNameQue + "\n");//print out the difference
+		
+		PriorityQueue<String> intersectionNameQue = new PriorityQueue<String>(firstNameQue);//create a priority queue
+		differenceNameQue.retainAll(secondNameQue);//
+		System.out.println("Print out the intersection queue:");
+		System.out.println(intersectionNameQue + "\n");
+		
+		
+		
+
+	}
+
+}
